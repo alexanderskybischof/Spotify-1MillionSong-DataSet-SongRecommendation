@@ -1,7 +1,9 @@
+//modules
 mod loading_data;
 mod cli;
 mod tests;
 
+//crates uploaded
 use loading_data::{load_data, feature_matrix, calc_z_sc};
 use std::error::Error;
 use cli::{recommend};
@@ -22,9 +24,12 @@ fn main() -> Result<(), Box<dyn Error>> {
     println!("{:?}", features.shape());
     //j checking the shape
 
+    //run final code
   recommend(&songs_loaded, &features);
+
+  //some()none()
     Ok(())
 
-    //create a test
+    
 }
 

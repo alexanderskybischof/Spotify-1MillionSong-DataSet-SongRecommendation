@@ -118,6 +118,3 @@ for mut vec in feats.axis_iter_mut(Axis(0)){//for vector in features . Make sure
     };
 }
 }
-
-
-//iterates over then map  
