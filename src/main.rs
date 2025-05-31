@@ -1,15 +1,12 @@
 //modules
-mod loading_data;
 mod cli;
+mod loading_data;
 mod tests;
 
 //crates uploaded
-use loading_data::{load_data, feature_matrix, calc_z_sc};
+use cli::recommend;
+use loading_data::{calc_z_sc, feature_matrix, load_data};
 use std::error::Error;
-use cli::{recommend};
-
-
-
 
 fn main() -> Result<(), Box<dyn Error>> {
     let songs_loaded = load_data("song_data.csv")?;
@@ -25,11 +22,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     //j checking the shape
 
     //run final code
-  recommend(&songs_loaded, &features);
+    recommend(&songs_loaded, &features);
 
-  //some()none()
+    //some()none()
     Ok(())
-
-    
 }
-
